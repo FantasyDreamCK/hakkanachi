@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    
+@import url(https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@100;200;300;400;500;600;800;900&display=swap);
+
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: visible;
+      font-family: 'Noto Serif TC', serif;
+    }
+
+    a {
+  text-decoration: none; /* 移除下劃線 */
+  color: black; /* 替換為你想要的原始顏色 */
+}
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      z-index: 2;
+      position: relative; /* 添加這行 */
+    }
+    
+    .nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 50%;
+      z-index: 2;
+      background-color: #fff;
+      position: relative; /* 添加這行 */
+    }
+
+    .nav button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      padding: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      flex-grow: 1;
+      font-family: 'Noto Serif TC', serif;
+      letter-spacing: 5px;
+    }
+
+    .nav button:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    .big{
+      font-size: 50px;
+      margin-left: 50px;
+    }
+
+
+    .iframe {
+      width: 100%;
+      border: none;
+      position: absolute;
+      top: 50px; /* 將 iframe 上移 50px，達到覆蓋的效果 */
+      left: 0;
+      z-index: 1;
+      overflow: visible
+    }
+
+  </style>
+  <title>Header</title>
+</head>
+<script type="text/javascript">
+  function SetCwinHeight() {
+    var iframeid = document.getElementById("mainframe");
+
+    if (iframeid) {
+      // 先設置一個較大的高度
+      iframeid.height = 1000;
+    }
+  }
+
+  // 在iframe載入完成後調用SetCwinHeight函數
+  window.onload = function() {
+    var iframe = document.getElementById("mainframe");
+    iframe.onload = function() {
+      SetCwinHeight();
+    };
+  };
+</script>
+
+
+
+<body>
+  <header>
+    <div>
+      <img src="https://media.discordapp.net/attachments/711559817361096786/1186216993712525322/icon.jpg?ex=659271aa&is=657ffcaa&hm=9a707db29eb5cd9679ec4f539035262955030a06cbccb7a97b95e8998f5f88ba&=&format=webp&width=633&height=368" alt="Logo" height="100px">
+
+    </div>
+    <div class="big">客糬嚕</div>
+    <nav class="nav">
+      <button><a href="https://gamemodetimyt.wixsite.com/hakkachiba/about-1" target="mainframe">品牌理念</a></button>
+      <button><a href="https://gamemodetimyt.wixsite.com/hakkachiba/product-page" target="mainframe">商品選購</a></button>
+      <button><a href="https://gamemodetimyt.wixsite.com/hakkachiba/qa" target="mainframe">常見問答</a></button>
+      <button><a href="https://gamemodetimyt.wixsite.com/hakkachiba/cart-page" target="mainframe">購物車</a></button>   
+      <button><a href="https://gamemodetimyt.wixsite.com/hakkachiba/company" target="mainframe">公司資訊</a></button>   
+    </nav>
+  </header>
+
+
+
+    <iframe
+      src="https://gamemodetimyt.wixsite.com/hakkachiba"
+      name="mainframe"
+      id="mainframe"
+      class="iframe"
+      frameborder="0"
+      onload="SetCwinHeight()"
+     
+  
+    ></iframe>
+
+
+</body>
+
+</html>
